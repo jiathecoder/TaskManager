@@ -1,0 +1,135 @@
+body{
+	background-image: url('../../images/lobby1.jpg');
+	 -webkit-background-size : cover;
+  -moz-background-size : cover;
+  -o-background-size : cover;
+  background-size : cover;
+  font-family: 'Roboto', sans-serif;
+}
+.container-fluid{
+	/*height: 100vw;*/
+}
+
+#site-title{
+	text-align: center;
+	padding:5%;
+	font-weight: bold;
+	
+
+}
+
+#site-title h1{
+	font-size: 4em;
+	font-weight: bold;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+#site-login h2,h4{	
+	font-weight: bold;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+}
+#site-login h4{	
+	font-weight: bold;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+	font-style: italic;
+}
+/*login.html*/
+
+#login .greeting{
+	margin-top: 9em;
+}
+#login a.register{
+	display: block;
+	padding-top: 1.3em;
+	font-family: 'Roboto', sans-serif;
+}
+#login-button{
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+.error{
+	color: red;
+}
+
+/*world*/
+#world{
+	height: 100vw;
+}
+.logout{
+	margin-top: 2em;
+}
+#world #button{
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	font-size: 2em;
+}
+#world #button button{
+	vertical-align: top;
+	font-size: 1em;
+}
+#world .homes{
+	margin-top: 2em;
+}
+#world .panel{
+	text-align: center;
+	background-color: transparent;
+	border: none;
+}
+#world #newHome {
+	width: 6em;
+}
+/*home*/
+#home h2{
+	vertical-align: top;
+	font-family: 'Roboto', sans-serif;
+}
+#home #button{
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+}
+#home #trashBin{
+	position: fixed;
+	left: 5%;
+	bottom: 5%;
+	width: 50px;
+}
+#home li{
+	list-style-type: none;
+	overflow: auto;
+}
+#home ul{
+	box-shadow: none;
+}
+#home .duty{
+	min-height: 50px;
+}
+#home .btn-group input{
+	height: 2.5em;
+	font-size: 1em;
+}
+#home .notDone{
+	background-color: indianred;
+}
+
+#home .Done{
+	background-color: green;
+}
+
+
+#home .resets {
+	margin-top: .5em;
+	margin-left: 1em;
+}
+/*#home #family{
+	margin-left: 102px;
+}*/
+/*#home .familyMember{
+	width: 100px;
+}*/

@@ -1,0 +1,92 @@
+<div id="home" ng-controller="homesController">
+	<div class="row">
+		<div class="col-md-9 col-md-offset-1 col-sm-10">
+			<h1 ng-bind='home.home'></h1>
+		</div>
+		<div class="col-md-2 col-sm-1 logout">
+			 <button class="btn btn-danger pull-center" ng-click="logout()">Logout</button>
+
+		</div>
+	</div>
+	<div class="row">
+	 <a href="#/world"><button id="button" type="button" class="btn btn-default">Back</button></a>
+		<!-- TASKS -->
+		<div class="col-md-5 col-md-offset-1">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Tasks</h2>
+				</div>
+				<div class="col-lg-9 col-md-10">
+
+					<!-- drag -->
+					<ul dnd-list="home.chores" dnd-drop="moveChore(item, home)" class="list-group duty">
+						<li class="list-group-item" ng-repeat="item in home.chores | limitTo:4"
+						    dnd-draggable="item"
+						    dnd-moved="home.chores.splice($index, 1); choreMoved(home)"
+						    dnd-effect-allowed="move"
+						    dnd-selected="models.selected = item"
+						    ng-class="{'selected': models.selected === item}"
+						    >
+						    {{item.chore}}
+						</li>
+					</ul>
+
+					<div class="btn-group" role="group" aria-label="...">
+						<input type="text" id="chore" placeholder="New Task" ng-model="newChore.name">						
+						<button type="button" class="btn btn-default btn-sm pull-right" ng-click="addChore(newChore)">+</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FAMILY -->
+		<div class="col-md-6">
+			<div class="row duty">
+				<div class="col-md-12">
+					<h2>Task Assignment</h2>
+				</div>
+
+				<div class="col-md-5" ng-repeat='familyMember in home.families'>
+					<div class="panel panel-default familyMember">
+					  <div class="panel-heading">
+					    <h3 class="panel-title" ng-bind='familyMember.name'></h3>
+					  </div>
+					  <div class="panel-body">
+
+					  	<!-- drag -->
+					    <ul dnd-list="familyMember.chores" dnd-drop="moveChore(item, familyMember)" class="list-group duty">
+					    	<li></li>
+							<li class="list-group-item" ng-repeat="item in familyMember.chores"
+							    dnd-draggable="item"
+							    dnd-moved="familyMember.chores.splice($index, 1); choreMoved(familyMember)"
+							    dnd-effect-allowed="move"
+							    dnd-selected="models.selected = item"
+							    ng-class="{'selected': models.selected === item}"
+							    >
+							    {{item.chore}}<button 
+							    class="btn btn-default btn-xs pull-right notDone" 
+							    type="button" 
+							    ng-show='familyMember._id === currentUser._id && item.completed === false'
+							    ng-click='completeChore(item._id, familyMember._id)'>Pending</button>
+							    <button 
+							    class="btn btn-default btn-xs pull-right Done" 
+							    type="button"  ng-show='familyMember._id === currentUser._id && item.completed === true'
+							    ng-click='uncompleteChore(item._id, familyMember._id)' >Done</button>
+							    
+							</li>
+						</ul>
+
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-group" role="group" aria-label="...">
+				<input type="text" placeholder="Add employee" id="family" ng-model="newFamily.name">
+				<button type="button" class="btn btn-default btn-sm pull-right" ng-click="addFamily(newFamily)">+</button>
+			</div>
+		</div>
+	</div>
+	<ul dnd-list="[]" dnd-drop="moveChore(item, 'trashBin')">
+        <li><img id="trashBin" src="http://png-4.findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png"></li>
+    </ul>
+	
+</div>

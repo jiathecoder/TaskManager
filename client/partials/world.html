@@ -1,0 +1,31 @@
+<div id="world" ng-controller="usersController">
+	<div class="row">
+		<div class="col-md-9 col-md-offset-1 col-sm-11">
+			<h1>Hi {{currentUser.name}}, Here are the places you can choose!</h1>
+		</div>
+		<div class="col-md-2 col-sm-1 logout">
+			 <button class="btn btn-danger " ng-click="logout()">Logout</button>
+		</div>
+	</div>
+	<div class="row homes">
+		<div class="col-md-10 col-md-offset-1">
+			<div "row">
+				<!-- original show homes -->
+				<div class="col-lg-3 col-md-3 col-sm-4" ng-repeat='item in homes'>
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					    <div class="btn-group" role="group" aria-label="...">
+						  <a href="#/home/{{item._id}}"><button type="button" class="btn btn-default" ng-bind='item.home'></button></a>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<form id="button">
+		<input type"text" id='newHome' ng-model='newHome.name' placeholder="Add new">
+	    <button type="button" class="btn btn-default" ng-click="addHome(newHome)">+</button>
+	</form>
+</div>

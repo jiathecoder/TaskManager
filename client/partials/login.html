@@ -1,0 +1,22 @@
+<div id='login' ng-controller='loginController'>
+  <div class="row greeting">
+      <div class="col-lg-4 col-lg-offset-4 col-md-5 col-md-offset-3 col-sm-6 col-sm-offset-3">
+        <div id="site-title">
+          <h1>TASK REPORTER</h1>
+        </div>
+        <div id="site-login">
+          <h2>Hello, How is it going today !</h2>
+          <h4>Lets get started!</h4>
+          <form id="login">
+            <div class="form-group">
+              <label for="name"><span class='error' ng-if='validations.name'>Ooops ! You forgot to enter your name</span></label>
+              <input type="text" class="form-control" id="name" placeholder="Name" ng-model='user.name'>
+            </div>
+        </div>
+            <div id="login-button">
+             <button class="btn btn-success " ng-click="entry(user)">Okay</button>
+            </div>
+          </form>
+      </div>
+  </div>
+</div>

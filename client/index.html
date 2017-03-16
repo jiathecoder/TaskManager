@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app='myAppModule'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Reporter</title>
+     <link rel="icon" href="../../client/images/icon.png">
+     <!-- bootstrap  -->
+    <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../bootstrap/css/bootstrap-theme.min.css">
+    <!-- sandstone theme -->
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/sandstone/bootstrap.min.css">
+    <!-- Personal css -->
+    <link rel="stylesheet" type="text/css" href="./../bootstrap/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./../bootstrap/css/drag.css">
+   
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- socket.io -->
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <!-- bootstrap javascript -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <!-- angular -->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js'/></script>
+    <!-- angular cookies -->
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-cookies.js"></script>
+    <!-- angular route provider -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js'></script>
+    <!-- app.js -->
+    <script src='/javascripts/app.js'></script>
+    <!-- angular factories -->
+    <script src='/javascripts/factories/userfactory.js'></script>
+    <!-- angular controllers -->
+    <script src='/javascripts/controllers/usersController.js'></script>
+    <script src='/javascripts/controllers/homesController.js'></script>
+    <script src='/javascripts/controllers/loginController.js'></script>
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
+    <!-- angular moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.10.1/angular-moment.min.js"></script>
+    <script src="./javascripts/angular-drag-and-drop-lists.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body>
+  
+    <div id='index' class="container-fluid">
+        <div ng-view="">
+        </div>
+    </div>
+</body>
+</html>
