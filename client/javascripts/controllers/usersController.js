@@ -1,4 +1,4 @@
-myAppModule.controller('usersController', function ($scope, $route, $cookies, $routeParams, $location, userFactory){
+myAppModule.controller('usersController', ["$scope", "$route", "$cookies", "$routeParams", "$location", "userFactory" ,function ($scope, $route, $cookies, $routeParams, $location, userFactory){
 	$scope.currentUser;
 	$scope.users = [];
 	$scope.validations = {};
@@ -61,4 +61,4 @@ myAppModule.controller('usersController', function ($scope, $route, $cookies, $r
 	$scope.deleteHome = function(home) {
 		console.log("client - homesController - deleteHome");
 	}
-});
+}]);
