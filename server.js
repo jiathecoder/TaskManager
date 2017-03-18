@@ -6,7 +6,7 @@ var session = require('express-session');
 var app = express();
 
 //using socket.io
-var server = app.listen(8000);
+var server = app.listen(process.env.PORT || 5000);
 var io = require('socket.io').listen(server);
 io.sockets.on('connection', function (socket) {
   console.log("WE ARE USING SOCKETS!");
