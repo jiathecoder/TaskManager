@@ -63,5 +63,5 @@ myAppModule.controller('usersController', function ($scope, $route, $cookies, $r
 	}
 }
 
-usersController.$inject = ['$scope', '$route', '$cookies', '$routeParams', '$location'];
+//usersController.$inject = ['$scope', '$route', '$cookies', '$routeParams', '$location'];
 );
